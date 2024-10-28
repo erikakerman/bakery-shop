@@ -1,6 +1,7 @@
 import Header from "./components/layout/Header";
 import Hero from "./components/ui/Hero";
 import FeaturedProducts from "./components/ui/FeaturedProducts";
+import Testimonials from "./components/ui/Testimonials";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <main>
         <Hero />
         <FeaturedProducts />
-        {/* Other sections will go here */}
+        <Testimonials />
       </main>
     </div>
   );
