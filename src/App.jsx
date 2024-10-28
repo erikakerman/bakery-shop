@@ -2,6 +2,7 @@ import Header from "./components/layout/Header";
 import Hero from "./components/ui/Hero";
 import FeaturedProducts from "./components/ui/FeaturedProducts";
 import Testimonials from "./components/ui/Testimonials";
+import ContactSection from "./components/ui/ContactSection";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Hero />
         <FeaturedProducts />
         <Testimonials />
+        <ContactSection />
       </main>
     </div>
   );
