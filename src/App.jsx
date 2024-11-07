@@ -1,21 +1,36 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
+import ProductsPage from "./pages/ProductsPage";
+
+// Homepage Components
 import Hero from "./components/ui/Hero";
 import FeaturedProducts from "./components/ui/FeaturedProducts";
 import Testimonials from "./components/ui/Testimonials";
 import ContactSection from "./components/ui/ContactSection";
 
-function App() {
+const HomePage = () => (
+  <>
+    <Hero />
+    <FeaturedProducts />
+    <Testimonials />
+    <ContactSection />
+  </>
+);
+
+const App = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <Hero />
-        <FeaturedProducts />
-        <Testimonials />
-        <ContactSection />
-      </main>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/products" element={<ProductsPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

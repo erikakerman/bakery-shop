@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,24 +12,28 @@ const Header = () => {
     <header className="bg-white border-b border-gray-200 w-full">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo/Brand Name */}
-        <div className="text-2xl font-semibold" style={{ color: "#E4126B" }}>
+        <Link
+          to="/"
+          className="text-2xl font-semibold"
+          style={{ color: "#E4126B" }}
+        >
           Sweet Delights
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8">
-          <a href="/" className="text-gray-600 hover:text-[#E4126B]">
+          <Link to="/" className="text-gray-600 hover:text-[#E4126B]">
             Home
-          </a>
-          <a href="/about" className="text-gray-600 hover:text-[#E4126B]">
+          </Link>
+          <Link to="/about" className="text-gray-600 hover:text-[#E4126B]">
             About
-          </a>
-          <a href="/products" className="text-gray-600 hover:text-[#E4126B]">
+          </Link>
+          <Link to="/products" className="text-gray-600 hover:text-[#E4126B]">
             Products
-          </a>
-          <a href="/contact" className="text-gray-600 hover:text-[#E4126B]">
+          </Link>
+          <Link to="/contact" className="text-gray-600 hover:text-[#E4126B]">
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -61,34 +66,34 @@ const Header = () => {
           } transition-transform duration-300 ease-in-out`}
         >
           <div className="flex flex-col p-4 space-y-4 text-center pt-20">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-gray-600 hover:text-[#E4126B] text-xl py-2"
               onClick={toggleMenu}
             >
               Home
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="text-gray-600 hover:text-[#E4126B] text-xl py-2"
               onClick={toggleMenu}
             >
               About
-            </a>
-            <a
-              href="/products"
+            </Link>
+            <Link
+              to="/products"
               className="text-gray-600 hover:text-[#E4126B] text-xl py-2"
               onClick={toggleMenu}
             >
               Products
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="text-gray-600 hover:text-[#E4126B] text-xl py-2"
               onClick={toggleMenu}
             >
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
